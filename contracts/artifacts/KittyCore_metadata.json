@@ -1,0 +1,118 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					}
+				],
+				"name": "getKitty",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "isGestating",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "isReady",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "cooldownIndex",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "nextActionAt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "siringWithId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "birthTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "matronId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "sireId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "generation",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "genes",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/KittyCore.sol": "KittyCore"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/KittyCore.sol": {
+			"keccak256": "0x76a0b1e5e7db0afc3a52af101c6cdd6ccc2687ad2f45fd963e1e719b624766ed",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://610a80f945578b450de9da6df9d82f3aa2078ac47099cb3b50c42a6f19b82ccc",
+				"dweb:/ipfs/QmaEbYPkgq2XKSvBDTWHPR3FkU7Sg2hsqbtQUSt7s4Ko8h"
+			]
+		},
+		"contracts/ZombieFactory.sol": {
+			"keccak256": "0xa9fcd8e563033168e55db6e1fbd09bb88ff2d18d07949f64c3fe95a09dbf5f28",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0e476ec17162d7563d0e5c94738572935e207173ba2193fe2a10316dbebd2a29",
+				"dweb:/ipfs/QmThotVSrJF8rApycEBmW6CmqFXL7btb9FT9knMaDzFXkP"
+			]
+		}
+	},
+	"version": 1
+}

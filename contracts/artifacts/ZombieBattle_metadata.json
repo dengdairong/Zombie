@@ -1,0 +1,297 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "zombieId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "dna",
+						"type": "uint256"
+					}
+				],
+				"name": "NewZombie",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "oldOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnerSet",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_zombieId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_targetId",
+						"type": "uint256"
+					}
+				],
+				"name": "attack",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "changeOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "createRandomZombie",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_zombieId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_kittyId",
+						"type": "uint256"
+					}
+				],
+				"name": "feedOnKitty",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					}
+				],
+				"name": "setKittyContractAddress",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "zombieToOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "zombies",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "dna",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint32",
+						"name": "level",
+						"type": "uint32"
+					},
+					{
+						"internalType": "uint32",
+						"name": "readyTime",
+						"type": "uint32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"changeOwner(address)": {
+					"details": "Change owner",
+					"params": {
+						"newOwner": "address of new owner"
+					}
+				},
+				"getOwner()": {
+					"details": "Return owner address ",
+					"returns": {
+						"_0": "address of owner"
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/ZombieBattle.sol": "ZombieBattle"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/2_Owner.sol": {
+			"keccak256": "0x9217019e8296d018f71417944ea4662450025f5800b3b2e681d33f42b5188aa6",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://3534e691905653734ea00ab4f6346882b88189875a97c19b995f384eefa0f59a",
+				"dweb:/ipfs/QmQhD8V18mt7cRDPwstxBiwJcj84WvzJ7fpvBurBa2Ex9s"
+			]
+		},
+		"contracts/KittyCore.sol": {
+			"keccak256": "0x55a54d54c84c0c4118f44a243a71b217d8ec467d63f005c4bde8cf2b4ab8a083",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a0321a38415f2746729c23b4646207b602ebc1f1b2571df9e495ebba5135b7f1",
+				"dweb:/ipfs/QmXgsTRffWSCmoauebpF4ij5G8ZDGuqssCcDseKG6Bc4Dy"
+			]
+		},
+		"contracts/ZombieBattle.sol": {
+			"keccak256": "0xdb30b135dabdb6b63d08e94ed5e2811d4b14be51080a343a3e70854230fc2721",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2e97397d7cc7e63d10d1f6ce195f533d4e9c8b419cfa83285d96ac64f4b1b4f4",
+				"dweb:/ipfs/QmdseWXHA8i8jwnGU4PWUtuMeoS5beSefGDo146jGGQtBz"
+			]
+		},
+		"contracts/ZombieFactory.sol": {
+			"keccak256": "0xbb8499d4aac6e59c66c305ba155090e517b8810353c8d0923d3fe247ebb3d2d4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://4d52a644143cea1b82b1972414728110e26740eefd0bccab87478f47e2a206ff",
+				"dweb:/ipfs/QmRJUrrK45NYj9e7A8KiBB335SKq5HpnEr4saHHQ9iMEzT"
+			]
+		},
+		"contracts/ZombieFeeding.sol": {
+			"keccak256": "0xb66eb655cf7fcff8ed1853819d39553d74c437ae2c7e4b9442d894413eb6dafe",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://286571704a7fe5599fe0d2d5102ed99296fb4781769d0bd360e76c48788c035a",
+				"dweb:/ipfs/QmcAUMosgMqg8i6z3Fory2CMLEAyYqvjFjRGfmLCKF2c27"
+			]
+		},
+		"hardhat/console.sol": {
+			"keccak256": "0x7434453e6d3b7d0e5d0eb7846ffdbc27f0ccf3b163591263739b628074dc103a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://49355f780520494d1d5a0f01858385e51bb5280ce0ecfb960f16995065dca395",
+				"dweb:/ipfs/QmSwJ6C5QLz6xKeQZS8wbwjU1KxRFTYfwbGmtzisd5sRW4"
+			]
+		}
+	},
+	"version": 1
+}

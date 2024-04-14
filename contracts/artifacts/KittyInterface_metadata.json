@@ -106,11 +106,11 @@
 			]
 		},
 		"contracts/ZombieFeeding.sol": {
-			"keccak256": "0x8198bda95da02748ed8013ac6437b50d1fccdc0dc428ab1d3aab54770a3d1425",
+			"keccak256": "0xfa58087d7fc800ce7d8d27daca51abc5047501738746b9fb619f96418ec70122",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c88f749ba8d52d117929a683fda0438c886cc645d3e28ce4e3092ef109ff8523",
-				"dweb:/ipfs/QmY983gvbQ9yH5cJfDe1LVMyYR56YjqxXEvnpCXwbHMWn7"
+				"bzz-raw://1182fc7cfbc358727d78132044b82ae057aca2a243bcc60055be675bd8de3b02",
+				"dweb:/ipfs/QmdMavxsNC9EkmRMq8283NrRh2hkhFCDVKkQLjM71T9fKx"
 			]
 		}
 	},
