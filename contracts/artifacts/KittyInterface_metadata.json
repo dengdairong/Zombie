@@ -6,80 +6,63 @@
 	"output": {
 		"abi": [
 			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "zombieId",
-						"type": "uint256"
-					},
-					{
-						"indexed": false,
-						"internalType": "string",
-						"name": "name",
-						"type": "string"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "dna",
-						"type": "uint256"
-					}
-				],
-				"name": "NewZombie",
-				"type": "event"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "_name",
-						"type": "string"
-					}
-				],
-				"name": "createRandomZombie",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "_id",
 						"type": "uint256"
 					}
 				],
-				"name": "zombieToOwner",
+				"name": "getKitty",
 				"outputs": [
 					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
+						"internalType": "bool",
+						"name": "isGestating",
+						"type": "bool"
+					},
 					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "zombies",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "name",
-						"type": "string"
+						"internalType": "bool",
+						"name": "isReady",
+						"type": "bool"
 					},
 					{
 						"internalType": "uint256",
-						"name": "dna",
+						"name": "cooldownIndex",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "nextActionAt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "siringWithId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "birthTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "matronId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "sireId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "generation",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "genes",
 						"type": "uint256"
 					}
 				],
@@ -100,7 +83,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/ZombieFactory.sol": "ZombieFactory"
+			"contracts/ZombieFeeding.sol": "KittyInterface"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -120,6 +103,14 @@
 			"urls": [
 				"bzz-raw://0e476ec17162d7563d0e5c94738572935e207173ba2193fe2a10316dbebd2a29",
 				"dweb:/ipfs/QmThotVSrJF8rApycEBmW6CmqFXL7btb9FT9knMaDzFXkP"
+			]
+		},
+		"contracts/ZombieFeeding.sol": {
+			"keccak256": "0x8198bda95da02748ed8013ac6437b50d1fccdc0dc428ab1d3aab54770a3d1425",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c88f749ba8d52d117929a683fda0438c886cc645d3e28ce4e3092ef109ff8523",
+				"dweb:/ipfs/QmY983gvbQ9yH5cJfDe1LVMyYR56YjqxXEvnpCXwbHMWn7"
 			]
 		}
 	},

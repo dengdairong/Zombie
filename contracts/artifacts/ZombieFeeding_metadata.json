@@ -47,6 +47,47 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
+						"name": "_zombieId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_targetDna",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_species",
+						"type": "string"
+					}
+				],
+				"name": "feedAndMultiply",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_zombieId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_kittyId",
+						"type": "uint256"
+					}
+				],
+				"name": "feedOnKitty",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
 					}
@@ -100,7 +141,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/ZombieFactory.sol": "ZombieFactory"
+			"contracts/ZombieFeeding.sol": "ZombieFeeding"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -120,6 +161,14 @@
 			"urls": [
 				"bzz-raw://0e476ec17162d7563d0e5c94738572935e207173ba2193fe2a10316dbebd2a29",
 				"dweb:/ipfs/QmThotVSrJF8rApycEBmW6CmqFXL7btb9FT9knMaDzFXkP"
+			]
+		},
+		"contracts/ZombieFeeding.sol": {
+			"keccak256": "0x8198bda95da02748ed8013ac6437b50d1fccdc0dc428ab1d3aab54770a3d1425",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c88f749ba8d52d117929a683fda0438c886cc645d3e28ce4e3092ef109ff8523",
+				"dweb:/ipfs/QmY983gvbQ9yH5cJfDe1LVMyYR56YjqxXEvnpCXwbHMWn7"
 			]
 		}
 	},

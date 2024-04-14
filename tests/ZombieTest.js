@@ -1,11 +1,11 @@
-// 引入Web3模块
-const Web3 = require('web3');
+// // 引入Web3模块
+// const Web3 = require('web3');
  
-// Remix VM的HTTP服务地址通常是http://localhost:8545
-const provider = new Web3.providers.HttpProvider('http://localhost:8545');
+// // Remix VM的HTTP服务地址通常是http://localhost:8545
+// const provider = new Web3.providers.HttpProvider('http://localhost:8545');
  
-// 创建web3实例
-const web3 = new Web3(provider);
+// // 创建web3实例
+// const web3 = new Web3(provider);
 
 // 下面是调用合约的方式:
 var abi = [
@@ -72,16 +72,21 @@ var abi = [
 			"type": "function"
 		}
 	]
-var contractAddress = "0xd9145CCE52D386f254917e481eB44e9943F39138"
+var contractAddress = "0xf8e81D47203A594245E36C48e151709F0C19fBe8"
 var ZombieFactory = new web3.eth.Contract(abi,contractAddress)
 
-// console.log(ZombieFactory)
-ZombieFactory.methods.createRandomZombie("ddr")
+
 
 
 // 监听 `NewZombie` 事件, 并且更新UI
 var event = ZombieFactory.events.NewZombie(function(error, result) {
-  if (error) return
+    console.log(result)
+  if (error) {
+    console.log(error+"1111")
+    console.log("1111")
+    return
+  }
+  console.log("test1")
   var json = generateZombie(result.zombieId, result.name, result.dna)
   web3.eth.log(JSON.stringify(json))
 })
@@ -114,3 +119,7 @@ function generateZombie(id, name, dna) {
   }
   return zombieDetails
 }
+
+
+console.log("test")
+ZombieFactory.methods.createRandomZombie("ddr")

@@ -13,9 +13,14 @@ contract ZombieFactory {
     Zombie[] public zombies;
 
     event NewZombie(uint zombieId,string name,uint dna);
-    
-    function _createZombie(string calldata _name,uint _dna) private {
+
+    mapping(uint=>address) public zombieToOwner;
+    mapping(address=>uint) ownerZombieCount;
+
+    function _createZombie(string memory _name,uint _dna) internal  {
         zombies.push(Zombie(_name,_dna)); 
+        zombieToOwner[zombies.length-1] = msg.sender;
+        ownerZombieCount[msg.sender] += 1;
         emit NewZombie(zombies.length-1,_name,_dna);
     }
 
@@ -24,6 +29,8 @@ contract ZombieFactory {
     }
 
     function createRandomZombie(string calldata _name) public {
+        require(ownerZombieCount[msg.sender]>0,"ERROR");
         _createZombie(_name,_generateRandomDna(_name));
     }
+
 }
