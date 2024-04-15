@@ -12,12 +12,12 @@ contract ZombieFeeding is ZombieFactory {
       kittyContract = KittyCore(_addr);
     }
 
-    function feedAndMultiply(uint _zombieId,uint _targetDna,string memory _species) internal ownerOf(_zombieId){
+    function feedAndMultiply(uint _zombieId,uint _targetDna,string memory _species) internal ownerOfCheck(_zombieId){
         Zombie storage myZombie = zombies[_zombieId];
         require(_isReady(myZombie));
         _targetDna %= dnaModulus;
         uint nDna = (_targetDna + myZombie.dna) / 2;
-        if(keccak256(bytes("kitty"))==keccak256(bytes(_species))){
+        if(keccak256(bytes("kitty")) == keccak256(bytes(_species))){
             nDna -= nDna % 100 + 99;
         }
         string memory zombieName = string(abi.encodePacked("Noname"));
@@ -39,7 +39,7 @@ contract ZombieFeeding is ZombieFactory {
       return block.timestamp >= _zombie.readyTime;
     }
 
-    modifier ownerOf(uint _zombieId) {
+    modifier ownerOfCheck(uint _zombieId) {
       require(zombieToOwner[_zombieId] == msg.sender);
       _;
     }

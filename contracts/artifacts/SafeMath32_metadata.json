@@ -1,0 +1,47 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "SafeMath library implemented for uint32",
+			"kind": "dev",
+			"methods": {},
+			"title": "SafeMath32",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/SafeMath.sol": "SafeMath32"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/SafeMath.sol": {
+			"keccak256": "0x5f3f50cf557d1daf8f6879d78a472729d5bb035f1e793d90912773cb51303485",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://94361545ad3ae7d53375d715198c5be4c74d294db56706bfa04b331b5df9f8a6",
+				"dweb:/ipfs/QmUEhmDh1xo9KofCSinfWHYBEV2GLDoV4DCzW1w1rYaASS"
+			]
+		}
+	},
+	"version": 1
+}

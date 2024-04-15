@@ -11,9 +11,19 @@ contract ZombieBattle is ZombieFeeding {
         randNonce++;
         return uint(keccak256(abi.encodePacked(block.timestamp, msg.sender, randNonce))) % _modulus;
     }
-    function attack(uint _zombieId,uint _targetId) external ownerOf(_zombieId) {
+    function attack(uint _zombieId,uint _targetId) external ownerOfCheck(_zombieId) {
         Zombie storage myZombir = zombies[_zombieId];
         Zombie storage enemyZombie = zombies[_targetId];
         uint rand = randMod(100);
+        if(rand <= attackVictoryProbability){
+            myZombir.winCount++;
+            myZombir.level++;
+            enemyZombie.lossCount++;
+            feedAndMultiply(_zombieId, enemyZombie.dna, "zombie");
+        }else{
+            enemyZombie.winCount++;
+            myZombir.lossCount++;
+            _triggerCooldown(myZombir);
+        }
     }
 }
